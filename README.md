@@ -46,6 +46,22 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)  
 ![alt text](https://github.com/masterchoo495/DDL-DML/blob/main/009.png)
 
+Выполненные запросы:
+```
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'netology';
+
+SELECT user,authentication_string,host FROM mysql.user;
+
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost' WITH GRANT OPTION;
+
+SHOW GRANTS FOR 'sys_temp'@'localhost';
+
+source /home/ubuntu/sakila-db/sakila-schema.sql
+
+source /home/ubuntu/sakila-db/sakila-data.sql
+
+```
+
 ---
 
 ### Задание 2
